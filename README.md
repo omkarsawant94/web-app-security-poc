@@ -4,7 +4,7 @@
 
 ## Overview
 
-A four-part Proof of Concept (PoC) series demonstrating real-world web application attack techniques. Submitted as the Capstone Project for the **Certified Ethical Hacker (CSEH)** programme at Boston Institute of Analytics (Aug 2025).
+A three-part Proof of Concept (PoC) series demonstrating real-world web application attack techniques. Submitted as the capstone project for the **CSEH (Cybersecurity Ethical Hacking)** programme at Boston Institute of Analytics (Aug 2025).
 
 Each topic covers the full offensive lifecycle — reconnaissance, exploitation, evidence collection, and remediation recommendations.
 
@@ -12,23 +12,19 @@ Each topic covers the full offensive lifecycle — reconnaissance, exploitation,
 
 | # | Attack Type | Target Platform | Technique |
 |---|---|---|---|
-| 1 | Session Hijacking | Adafruit (live e-commerce) | Cookie replay attack |
-| 2 | Session Fixation | Acunetix testphp.vulnweb.com | Pre-auth session token reuse |
-| 3 | Stored XSS + Cookie Theft | PortSwigger Web Security Academy | Script injection via Burp Collaborator |
-| 4 | CSRF | PortSwigger Web Security Academy | Forged state-changing HTML form |
+| 1 | Session Fixation | Acunetix testphp.vulnweb.com | Pre-auth session token reuse |
+| 2 | Stored XSS + Cookie Theft | PortSwigger Web Security Academy | Script injection via Burp Collaborator |
+| 3 | CSRF | PortSwigger Web Security Academy | Forged state-changing HTML form |
 
 ## Topic Summaries
 
-### Topic 1 — Session Hijacking via Cookie Replay
-Demonstrated that possession of a valid session cookie is sufficient to fully impersonate an authenticated user on a live e-commerce platform. Analysed absence of IP binding, user-agent binding, and step-up re-authentication controls.
-
-### Topic 2 — Session Fixation
+### Topic 1 — Session Fixation
 Demonstrated failure to regenerate session ID post-authentication on a vulnerable test application, allowing a pre-planted session token to be reused after victim login to gain unauthorised access.
 
-### Topic 3 — Stored XSS & Session Cookie Theft
+### Topic 2 — Stored XSS & Session Cookie Theft
 Injected a malicious JavaScript payload into a blog comment field on a PortSwigger lab. Exfiltrated HttpOnly-unprotected session cookies via Burp Collaborator server, then replayed the stolen session to fully impersonate the victim.
 
-### Topic 4 — Cross-Site Request Forgery (CSRF)
+### Topic 3 — Cross-Site Request Forgery (CSRF)
 Crafted a forged HTML form exploiting absent CSRF token validation to execute unauthorised account actions on behalf of an authenticated victim — without stealing credentials or session cookies.
 
 ## Tools Used
@@ -50,10 +46,6 @@ Crafted a forged HTML form exploiting absent CSRF token validation to execute un
 ## Repository Structure
 ```
 web-app-security-poc/
-│
-├── Topic-1-Session-Hijacking/
-│   ├── Session_Hijacking_PoC.docx
-│   └── Screenshots/
 │
 ├── Topic-2-Session-Fixation/
 │   ├── Session_Fixation_PoC.docx
